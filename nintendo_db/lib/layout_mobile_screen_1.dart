@@ -38,6 +38,7 @@ class _StateLayoutMobileScreen1 extends State<LayoutMobileScreen1> {
                   width: 50.0,
                   fit: BoxFit.contain,
                 ),
+                onTap: () => _navigateTo(context, widget.seccio, index),
               );
             });
       }
@@ -54,5 +55,11 @@ class _StateLayoutMobileScreen1 extends State<LayoutMobileScreen1> {
       ),
       body: _setBody(context),
     );
+
+    void _navigateTo (BuildContext context, String value, int index) {
+      Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) => LayoutMobileScreen2(seccio: value, index: index)));
+    }
+
   }
 }
