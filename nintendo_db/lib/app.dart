@@ -26,11 +26,10 @@ class AppState extends State<App> {
       home: _setLayout(context),
     );
   }
+
+  // Definir la funció que escull el 'layout' a mostrar
   Widget _setLayout(BuildContext context) {
     // Aquí, més endavant escollirem mòbil o desktop
     return const LayoutMobileScreen0();
   }
-
 }
-
-

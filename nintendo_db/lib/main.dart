@@ -5,15 +5,7 @@ import 'package:window_manager/window_manager.dart';
 import 'app.dart';
 import 'app_data.dart';
 
-
 void main() async {
-  runApp(
-    ChangeNotifierProvider(
-    create: (context) => AppData(),
-    child: const App(),
-    ),
-  );
-
   // En aplicacions d'escriptori, cridar la funció 'showWindow'
   try {
     if (Platform.isLinux || Platform.isMacOS || Platform.isWindows) {
@@ -27,13 +19,17 @@ void main() async {
   }
 
   // Definir 'App' com el widget principal
-  runApp(const App());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => AppData(),
+      child: const App(),
+    ),
+  );
 }
 
 // Al mostrar la finestra d'aplicació,
 // definir una mida de finestra mínima i el títol de la finestra
-void showWindow (_) async {
+void showWindow(_) async {
   windowManager.setMinimumSize(const Size(300.0, 600.0));
   await windowManager.setTitle('App');
 }
-

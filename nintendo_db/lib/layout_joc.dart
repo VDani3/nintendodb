@@ -1,25 +1,12 @@
 import 'package:flutter/material.dart';
 
-class LayoutPersonatge extends StatelessWidget {
+class LayoutJoc extends StatelessWidget {
   final dynamic itemData;
 
   // Relacionar els colors amb el text que els defineix
-  final Map<String, Color> colorMap = {
-    'red': Colors.red,
-    'blue': Colors.blue,
-    'green': Colors.green,
-    'orange': Colors.orange,
-    'brown': Colors.brown,
-    'grey': Colors.grey,
-  };
 
   // Constructor
-  LayoutPersonatge({Key? key, required this.itemData}) : super(key: key);
-
-  // Retornar un 'Color' a partir del text, fent servir el mapa de colors anterior
-  Color getColorFromString(String colorString) {
-    return colorMap[colorString.toLowerCase()] ?? Colors.black;
-  }
+  LayoutJoc({Key? key, required this.itemData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,13 +35,9 @@ class LayoutPersonatge extends StatelessWidget {
                       fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 10),
-                Container(
-                  width: 10,
-                  height: 10,
-                  color: getColorFromString(itemData['color']),
-                ),
-                const SizedBox(height: 10),
-                Text(itemData['nom_del_videojoc']),
+                Text(itemData['any'].toString()),
+                Text(itemData['tipus']),
+                Text(itemData['descripcio'])
               ],
             ),
           ),
