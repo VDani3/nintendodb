@@ -23,6 +23,8 @@ class _StateLayoutMobileScreen2 extends State<LayoutMobileScreen2> {
         return LayoutPersonatge(itemData: itemData);
       case 'Jocs':
         return LayoutJoc(itemData: itemData);
+      case 'Consoles':
+        return LayoutConsola(itemData: itemData);
     }
     return Text('Unknown layout: ${widget.seccio}');
   }
