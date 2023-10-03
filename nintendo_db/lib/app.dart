@@ -18,7 +18,7 @@ class AppState extends State<App> {
     // Farem servir la base 'Material'
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Aplicació Flutter',
+      title: 'NintendoDB',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,

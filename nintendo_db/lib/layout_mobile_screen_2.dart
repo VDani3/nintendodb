@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nintendo_db/layout_consola.dart';
 import 'package:nintendo_db/layout_joc.dart';
 import 'package:provider/provider.dart';
 import 'app_data.dart';
@@ -42,7 +43,8 @@ class _StateLayoutMobileScreen2 extends State<LayoutMobileScreen2> {
       return Scaffold(
           appBar: AppBar(
             backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-            title: Text(itemData['nom']),
+            title: Text(itemData['nom'], style: TextStyle(fontWeight: FontWeight.bold)),
+            centerTitle: true,
             leading: IconButton(
               icon: const Icon(Icons.arrow_back),
               onPressed: () => Navigator.of(context).pop(),

@@ -31,5 +31,5 @@ void main() async {
 // definir una mida de finestra mínima i el títol de la finestra
 void showWindow(_) async {
   windowManager.setMinimumSize(const Size(300.0, 600.0));
-  await windowManager.setTitle('App');
+  await windowManager.setTitle('NintendoDB');
 }

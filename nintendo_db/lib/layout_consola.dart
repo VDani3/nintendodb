@@ -11,6 +11,9 @@ class LayoutConsola extends StatelessWidget {
     'orange': Colors.orange,
     'brown': Colors.brown,
     'grey': Colors.grey,
+    'purple': Colors.purple,
+    'black': Colors.black,
+    'white': Colors.white,
   };
 
   // Constructor
@@ -23,7 +26,7 @@ class LayoutConsola extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String data = itemData["data"];
+    String data = itemData["data"];
     List<String> partes = data.split("-");
     data = partes[0];
 
@@ -58,8 +61,10 @@ class LayoutConsola extends StatelessWidget {
                   color: getColorFromString(itemData['color']),
                 ),
                 const SizedBox(height: 10),
-                Text(data, style: const TextStyle(color: Colors.grey[300])),
-                Text(itemData['procesador'], style: const TextStyle(fontWeight.bold)),
+                Text(data, style: TextStyle(color: Colors.grey[500])),
+                Text(itemData['procesador'],
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
+                Text(itemData['venudes'].toString() + ' venudes')
               ],
             ),
           ),

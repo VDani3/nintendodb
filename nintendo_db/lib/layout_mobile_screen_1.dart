@@ -25,7 +25,8 @@ class _StateLayoutMobileScreen1 extends State<LayoutMobileScreen1> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.seccio),
+        title: Text(widget.seccio, style: TextStyle(fontWeight: FontWeight.bold)),
+        centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.of(context).pop(),

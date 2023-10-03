@@ -19,7 +19,8 @@ class _StateLayoutMobileScreen0 extends State<LayoutMobileScreen0> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Nintendo DB'),
+        title: const Text('Nintendo DB', style: TextStyle(fontWeight: FontWeight.bold)),
+        centerTitle: true,
       ),
       body: ListView(
         children: <Widget>[

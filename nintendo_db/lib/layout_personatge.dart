@@ -11,6 +11,7 @@ class LayoutPersonatge extends StatelessWidget {
     'orange': Colors.orange,
     'brown': Colors.brown,
     'grey': Colors.grey,
+    'pink': Colors.pink,
   };
 
   // Constructor
